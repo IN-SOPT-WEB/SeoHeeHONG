@@ -66,7 +66,86 @@ nav {
   color: var(--text-white);
   cursor: pointer;
 }
+/* main css */
+.container {
+  display: flex;
+  justify-content: center;
 
+  width: 100%;
+  height: 100%;
+  margin: 1rem 0.5rem;
+}
+.todo {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 1em;
+  margin: 0 1rem;
+
+  border-radius: 5%;
+  background-color: var(--btn-color);
+
+  overflow: hidden;
+
+  transition: width 0.3s, padding 0.3s;
+}
+.todo__header {
+  color: var(--main-color);
+
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.todo__list {
+  flex-grow: 1;
+}
+.todo__list > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+
+  width: auto;
+  padding: 1em;
+  margin: 0.5em;
+
+  background-color: var(--sub-color);
+  border-radius: 20px;
+  color: var(--text-white);
+}
+/* 리스트 section별 footer */
+.todo > footer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+input {
+  flex-grow: 1;
+
+  height: 2rem;
+  padding: 0.2rem;
+
+  border: 0.1rem solid var(--main-color);
+
+  font-size: 1rem;
+}
+.todo__footer > button {
+  width: 2rem;
+
+  border: 0.1rem solid var(--main-color);
+  background-color: var(--text-white);
+  border-radius: 10%;
+
+  font-size: 1.2rem;
+  text-align: center;
+}
+.todo__footer > button:hover {
+  background-color: var(--main-color);
+  color: var(--text-white);
+
+  cursor: pointer;
+}
 /* 맨 하단 푸터 */
 footer.bottom {
   display: flex;
