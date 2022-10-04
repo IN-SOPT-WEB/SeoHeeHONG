@@ -117,3 +117,87 @@ nav {
     }
   }
 }
+main {
+  display: flex;
+}
+section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 100%;
+  padding: 0 6rem;
+
+  background-color: $section-color;
+}
+article {
+  display: flex;
+  flex-direction: column;
+
+  width: 20rem;
+  height: auto;
+  margin: 1rem 0.4rem;
+
+  border: 0.1rem solid $article-background-color;
+  border-radius: 0.8rem;
+  background-color: $article-background-color;
+
+  overflow: hidden;
+
+  > a {
+    height: 7rem;
+    padding: 1rem;
+
+    font-size: 0.8rem;
+
+    text-decoration: none;
+    > h3 {
+      padding: 0.3rem 0;
+
+      font-size: 1rem;
+    }
+  }
+  > .velog__data {
+    padding: 1rem;
+
+    border-bottom: 0.1rem solid black;
+
+    font-size: 0.4rem;
+  }
+}
+
+.velog__image {
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.velog__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+
+  & .velog__footer__profile,
+  .velog__footer__likes {
+    display: flex;
+    place-items: center;
+    gap: 0.2rem;
+  }
+}
+
+.velog__footer__image {
+  width: 2em;
+  height: 2rem;
+
+  border-radius: 70%;
+  overflow: hidden;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
