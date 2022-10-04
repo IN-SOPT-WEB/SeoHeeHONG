@@ -1,6 +1,8 @@
-$main-color: #f2f1d5;
-$sub-color: #dbd982;
-$btn-color: #5c5fbb;
+$main-color: #5755e8;
+$nav-color: #7a78d7;
+$section-color: #f2f1d5;
+$article-background-color: #e9e95a;
+$main-text-color: #e9e95a;
 $text-color: rgb(18, 24, 98);
 $white-color: white;
 
@@ -8,10 +10,9 @@ $white-color: white;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Do Hyeon", sans-serif;
 
-  background-color: $main-color;
   color: $text-color;
+  font-family: "Do Hyeon", sans-serif;
 }
 header.title {
   display: flex;
@@ -20,8 +21,13 @@ header.title {
 
   padding: 2rem;
 
+  background-color: $main-color;
+  color: $main-text-color;
+
   > h1 {
+    color: $main-text-color;
     font-size: 3rem;
+
     &:hover {
       cursor: pointer;
     }
@@ -33,19 +39,23 @@ header.title {
   place-items: center;
   gap: 1rem;
 
-  > span:hover {
-    cursor: pointer;
+  > span {
+    color: $main-text-color;
+    &:hover {
+      cursor: pointer;
+    }
   }
+
   > button {
     padding: 0.5rem;
 
-    border: 0.4rem solid $btn-color;
+    border: 0.4rem solid $article-background-color;
     border-radius: 2rem;
 
     font-size: 1.5rem;
 
     &:hover {
-      background-color: $btn-color;
+      background-color: $article-background-color;
       color: $white-color;
 
       cursor: pointer;
@@ -58,11 +68,52 @@ header.title {
 
   border-radius: 70%;
   overflow: hidden;
+
   > img {
     width: 100%;
     height: 100%;
     &:hover {
       cursor: pointer;
+    }
+  }
+}
+nav {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+
+  padding: 1rem 2rem;
+
+  background-color: $nav-color;
+
+  > button {
+    width: fit-content;
+    padding: 0.3rem;
+
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+
+    text-align: center;
+  }
+}
+.nav__list {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+
+  background-color: $nav-color;
+
+  li {
+    display: flex;
+    place-items: center;
+    gap: 0.2rem;
+
+    font-size: 1.3rem;
+
+    &:hover {
+      cursor: pointer;
+      border-bottom: 0.2rem solid $text-color;
     }
   }
 }

@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgb(18, 24, 98);
+  font-family: "Do Hyeon", sans-serif;
+}
+
+header.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #5755e8;
+  color: #e9e95a;
+}
+header.title > h1 {
+  color: #e9e95a;
+  font-size: 3rem;
+}
+header.title > h1:hover {
+  cursor: pointer;
+}
+
+.header__container {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+}
+.header__container > span {
+  color: #e9e95a;
+}
+.header__container > span:hover {
+  cursor: pointer;
+}
+.header__container > button {
+  padding: 0.5rem;
+  border: 0.4rem solid #e9e95a;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+}
+.header__container > button:hover {
+  background-color: #e9e95a;
+  color: white;
+  cursor: pointer;
+}
+
+.profile__container {
+  width: 4em;
+  height: 4rem;
+  border-radius: 70%;
+  overflow: hidden;
+}
+.profile__container > img {
+  width: 100%;
+  height: 100%;
+}
+.profile__container > img:hover {
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #7a78d7;
+}
+nav > button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.nav__list {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+  background-color: #7a78d7;
+}
+.nav__list li {
+  display: flex;
+  place-items: center;
+  gap: 0.2rem;
+  font-size: 1.3rem;
+}
+.nav__list li:hover {
+  cursor: pointer;
+  border-bottom: 0.2rem solid rgb(18, 24, 98);
+}/*# sourceMappingURL=style.css.map */
