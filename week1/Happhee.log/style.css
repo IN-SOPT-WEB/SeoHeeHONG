@@ -1,3 +1,25 @@
+@-webkit-keyframes post-ani {
+  25% {
+    transform: rotate(2deg) scale(1.01);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+  75% {
+    transform: rotate(-2deg) scale(1.01);
+  }
+}
+@keyframes post-ani {
+  25% {
+    transform: rotate(2deg) scale(1.01);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+  75% {
+    transform: rotate(-2deg) scale(1.01);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -117,6 +139,11 @@ article {
   border-radius: 0.8rem;
   background-color: #e9e95a;
   overflow: hidden;
+}
+article:hover {
+  opacity: 0.9;
+  -webkit-animation: post-ani 0.8s linear 1;
+          animation: post-ani 0.8s linear 1;
 }
 article > a {
   height: 7rem;
