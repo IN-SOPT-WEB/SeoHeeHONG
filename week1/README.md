@@ -1,3 +1,5 @@
+![스크린샷 2022-10-06 오후 10 06 31](https://user-images.githubusercontent.com/79238676/194321269-04a993ff-9ea0-4d42-953c-6a8bcd9a072e.png)
+
 # 웹접근성(Web Accessibility)
 
 ## ✨ 접근성이란 무엇인가?
