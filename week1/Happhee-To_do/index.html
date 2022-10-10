@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💛 Happhee_To-Do 💛</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="title">
+      <h1>💛 Happhee TO DO 💛</h1>
+    </header>
+    <nav>
+      <button type="button" class="nav__item">Today</button>
+      <button type="button" class="nav__item">Tomorrow</button>
+      <button type="button" class="nav__item">All</button>
+    </nav>
+    <main class="container">
+      <section class="todo">
+        <header class="todo__header">
+          <h2>Today</h2>
+        </header>
+        <ul class="todo__list">
+          <li>
+            <span>솝트 생각하기</span>
+            <span class="todo__list__cancleBtn material-icons"> cancel </span>
+          </li>
+          <li>
+            <span>솝케팝 안무따기</span>
+            <span class="todo__list__cancleBtn material-icons"> cancel </span>
+          </li>
+          <li>
+            <span>오손도손 웹이 최고야 💛</span>
+            <span class="todo__list__cancleBtn material-icons"> cancel </span>
+          </li>
+        </ul>
+        <form
+          class="todo__form"
+          method="post"
+          accep-charset="utf-8"
+          name="todo__list__info"
+        >
+          <input type="text" placeholder="오늘 할 일을 추가해주세요" />
+          <button type="button">
+            <span>+</span>
+          </button>
+        </form>
+      </section>
+      <section class="todo">
+        <header class="todo__header">
+          <h2>Tomorrow</h2>
+        </header>
+        <ul class="todo__list">
+          <li>
+            <span>웹둥이들 코드리뷰하러 가기</span>
+            <span class="todo__list__cancleBtn material-icons"> cancel </span>
+          </li>
+          <li>
+            <span>알고리즘 스터디 조 편성하기</span>
+            <span class="todo__list__cancleBtn material-icons"> cancel </span>
+          </li>
+        </ul>
+        <form
+          class="todo__form"
+          method="post"
+          accep-charset="utf-8"
+          name="todo__list__info"
+        >
+          <input type="text" placeholder="내일 할 일을 추가해주세요" />
+          <button type="button">
+            <span>+</span>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="bottom">Happhee - 瑞喜</footer>
+  </body>
+</html>
