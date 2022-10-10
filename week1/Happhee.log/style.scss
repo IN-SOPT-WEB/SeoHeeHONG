@@ -1,0 +1,240 @@
+$main-color: #5755e8;
+$nav-color: #7a78d7;
+$section-color: #f2f1d5;
+$article-background-color: #e9e95a;
+$main-text-color: #e9e95a;
+$text-color: rgb(18, 24, 98);
+$white-color: white;
+
+@keyframes post-ani {
+  25% {
+    transform: rotate(2deg) scale(1.01);
+  }
+
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  75% {
+    transform: rotate(-2deg) scale(1.01);
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  color: $text-color;
+  font-family: "Do Hyeon", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+header.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem;
+
+  background-color: $main-color;
+  color: $main-text-color;
+
+  > h1 {
+    color: $main-text-color;
+    font-size: 3rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.header__container {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+
+  > span {
+    color: $main-text-color;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  > button {
+    padding: 0.5rem;
+
+    border: 0.4rem solid $article-background-color;
+    border-radius: 2rem;
+
+    font-size: 1.5rem;
+
+    &:hover {
+      background-color: $article-background-color;
+      color: $white-color;
+
+      cursor: pointer;
+    }
+  }
+}
+.profile__container {
+  width: 4em;
+  height: 4rem;
+
+  border-radius: 70%;
+  overflow: hidden;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding: 1rem 2rem;
+
+  background-color: $nav-color;
+
+  > button {
+    width: fit-content;
+    padding: 0.3rem;
+
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+
+    text-align: center;
+  }
+}
+.nav__list {
+  display: flex;
+
+  place-items: center;
+  gap: 1rem;
+
+  background-color: $nav-color;
+
+  li {
+    display: flex;
+    place-items: center;
+    gap: 0.2rem;
+
+    font-size: 1.3rem;
+
+    &:hover {
+      cursor: pointer;
+      border-bottom: 0.2rem solid $text-color;
+    }
+  }
+}
+main {
+  display: flex;
+}
+section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: auto;
+  padding: 0 6rem;
+
+  background-color: $section-color;
+}
+article {
+  display: flex;
+  flex-direction: column;
+
+  width: 20rem;
+  height: auto;
+  margin: 1rem 0.4rem;
+
+  border: 0.1rem solid $article-background-color;
+  border-radius: 0.8rem;
+  background-color: $article-background-color;
+
+  overflow: hidden;
+  &:hover {
+    opacity: 0.9;
+    animation: post-ani 0.8s linear 1;
+  }
+  > a {
+    height: 7rem;
+    padding: 1rem;
+
+    font-size: 0.8rem;
+
+    text-decoration: none;
+    > h3 {
+      padding: 0.3rem 0;
+
+      font-size: 1rem;
+    }
+  }
+  > .velog__data {
+    padding: 1rem;
+
+    border-bottom: 0.1rem solid black;
+
+    font-size: 0.4rem;
+  }
+}
+
+.velog__image {
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.velog__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+
+  & .velog__footer__profile,
+  .velog__footer__likes {
+    display: flex;
+    place-items: center;
+    gap: 0.2rem;
+  }
+}
+
+.velog__footer__image {
+  width: 2em;
+  height: 2rem;
+
+  border-radius: 70%;
+  overflow: hidden;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+@media all and (min-width: 321px) and (max-width: 768px) {
+  article {
+    width: 70rem;
+  }
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+  article {
+    width: 50rem;
+  }
+}
+@media all and (min-width: 1025px) {
+  article {
+    width: 20rem;
+  }
+}
