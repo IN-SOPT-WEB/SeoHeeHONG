@@ -12,7 +12,7 @@ function isToday(name) {
   return name == "todo__today__info" ? TODAY : TOMORROW;
 }
 // ul에서 선택한 할일 삭제
-function removeTotoList(e) {
+function removeTodoList(e) {
   if (e.target.classList.contains("todo__list__cancleBtn")) {
     const removeLi = e.target.parentNode;
     const removeBtn = e.target;
