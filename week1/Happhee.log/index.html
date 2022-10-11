@@ -21,7 +21,6 @@
           local_florist
         </span>
         <span class="material-icons" style="font-size: 3rem"> search </span>
-        <button type="button">Write</button>
         <div class="profile__container">
           <img src="./public/profile.png" alt="HappheeProfile" />
         </div>
@@ -38,9 +37,16 @@
           <span>최신</span>
         </li>
       </ul>
-      <button type="menu">
-        이번주<span class="material-icons"> expand_more </span>
-      </button>
+      <div class="input__wrapper">
+        <input class="time__btn" type="button" value="Today" />
+        <span class="material-icons"> expand_more </span>
+        <ul class="time__type hide">
+          <li class="time__item select">Today</li>
+          <li class="time__item">Week</li>
+          <li class="time__item">Month</li>
+          <li class="time__item">Year</li>
+        </ul>
+      </div>
     </nav>
     <main>
       <section>
@@ -387,4 +393,5 @@
       </section>
     </main>
   </body>
+  <script type="module" src="./main.js"></script>
 </html>
