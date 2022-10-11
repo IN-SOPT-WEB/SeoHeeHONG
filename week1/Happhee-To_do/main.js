@@ -11,9 +11,15 @@ const todoLists = $$(".todo__list");
 function isToday(name) {
   return name == "todo__today__info" ? TODAY : TOMORROW;
 }
-
-function removeTotoList(e) {}
-
+// ul에서 선택한 할일 삭제
+function removeTotoList(e) {
+  if (e.target.classList.contains("todo__list__cancleBtn")) {
+    const removeLi = e.target.parentNode;
+    const removeBtn = e.target;
+    const isRemove = confirm("정말 삭제하시겠습니까?");
+    if (isRemove) removeLi.remove();
+  }
+}
 // 폼 submit을 통해 리스트를 추가하고, 애니메이션으로 사용자에게 어떤 리스트가 추가되었는지 보여주기
 function addTodoList(e) {
   e.preventDefault();
