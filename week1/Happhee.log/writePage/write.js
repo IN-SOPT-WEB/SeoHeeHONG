@@ -4,7 +4,12 @@ const $ = (selector) => document.querySelector(selector);
 const BUTTON = 2;
 const TAGCONTENT = 1;
 
-function removeTag(e) {}
+function removeTag(e) {
+  const removeLi = e.target.parentNode;
+  const removeBtn = e.target;
+  const isRemove = confirm("정말 삭제하시겠습니까?");
+  if (isRemove) removeLi.remove();
+}
 
 function addInputTag(e) {
   const tagList = $("ul");
