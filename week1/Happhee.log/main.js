@@ -6,7 +6,6 @@ const ICON = "expand_more";
 const velogTimeBtn = $(".time__btn");
 const velogTimeList = $$(".time__item");
 
-// 선택한 시간타입을 알아내고 다시 토글 후 select 클래스를 제어해 리스트의 배경색 제어
 function selectVelogTime(e) {
   const selectTime = e.target.innerText;
   velogTimeBtn.value = selectTime;
@@ -27,7 +26,14 @@ function selectVelogTime(e) {
     }
   });
 }
-function toggleVelogTimeMenu() {}
+// 시간 메뉴 토글링 제어 함수
+function toggleVelogTimeMenu() {
+  const timeTypeUl = $(".time__type");
+
+  if (timeTypeUl.classList.contains("hide"))
+    timeTypeUl.classList.remove("hide");
+  else timeTypeUl.classList.add("hide");
+}
 function attachEvent() {
   velogTimeBtn.addEventListener("click", toggleVelogTimeMenu);
   velogTimeList.forEach((velogTime) => {
