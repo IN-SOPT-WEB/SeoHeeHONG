@@ -74,7 +74,7 @@ function attachEvent({ todoForms, selectTypeBtns }) {
     todoForm.addEventListener("submit", addTodoList);
   });
   todoLists.forEach((todoList) => {
-    todoList.addEventListener("click", removeTotoList);
+    todoList.addEventListener("click", removeTodoList);
   });
   selectTypeBtns.forEach((typeBtn) => {
     typeBtn.addEventListener("click", selectTodoType);
