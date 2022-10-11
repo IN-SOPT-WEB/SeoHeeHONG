@@ -11,5 +11,6 @@
 | 1주차 | 💛 Happhee - To Do 💛 |   [링크](https://github.com/IN-SOPT-WEB/SeoHeeHONG/pull/1)    |
 | 1주차 | 💛 Happhee.log 💛     |   [링크](https://github.com/IN-SOPT-WEB/SeoHeeHONG/pull/2)      |
 | 1주차 |  📚 Web accessibility     |   [링크](https://github.com/IN-SOPT-WEB/SeoHeeHONG/pull/3)      |
+| 2주차 |  ✨ Happhee-To_do + JS ✨     |   [링크](https://github.com/IN-SOPT-WEB/SeoHeeHONG/pull/4)      |
 
 </div>
