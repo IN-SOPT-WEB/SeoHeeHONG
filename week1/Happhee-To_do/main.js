@@ -46,8 +46,28 @@ function addTodoList(e) {
     alert("할일을 작성해주세요");
   }
 }
+// todolist 보기 타입에 따라 todo_hide 클래스 속성 추가 및 제거
+function selectTodoType(e) {
+  let todaySection = todoLists[TODAY].parentNode;
+  let tomorrowSection = todoLists[TOMORROW].parentNode;
 
-function selectTodoType(e) {}
+  switch (e.target.innerHTML) {
+    case "Today":
+      todaySection.classList.remove("todo_hide");
+      tomorrowSection.classList.add("todo_hide");
+      break;
+
+    case "Tomorrow":
+      todaySection.classList.add("todo_hide");
+      tomorrowSection.classList.remove("todo_hide");
+      break;
+
+    case "All":
+      todaySection.classList.remove("todo_hide");
+      tomorrowSection.classList.remove("todo_hide");
+      break;
+  }
+}
 // 이벤트 부착
 function attachEvent({ todoForms, selectTypeBtns }) {
   todoForms.forEach((todoForm) => {
