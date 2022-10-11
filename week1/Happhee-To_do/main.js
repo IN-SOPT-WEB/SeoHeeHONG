@@ -6,7 +6,7 @@ const TOMORROW = 1;
 const INPUT = 0;
 const BUTTON = 1;
 
-const todoLists = $$(".todo__list");
+const todoListGroup = $$(".todo__list");
 
 function isToday(name) {
   return name == "todo__today__info" ? TODAY : TOMORROW;
@@ -27,7 +27,7 @@ function addTodoList(e) {
   const currentForm = e.target;
   const current = isToday(currentForm.name);
 
-  let todoList = todoLists[current];
+  let todoList = todoListGroup[current];
   const addBtn = currentForm[BUTTON];
   const input = currentForm[INPUT];
 
@@ -48,8 +48,8 @@ function addTodoList(e) {
 }
 // todolist 보기 타입에 따라 todo_hide 클래스 속성 추가 및 제거
 function selectTodoType(e) {
-  let todaySection = todoLists[TODAY].parentNode;
-  let tomorrowSection = todoLists[TOMORROW].parentNode;
+  let todaySection = todoListGroup[TODAY].parentNode;
+  let tomorrowSection = todoListGroup[TOMORROW].parentNode;
 
   switch (e.target.innerHTML) {
     case "Today":
@@ -69,21 +69,21 @@ function selectTodoType(e) {
   }
 }
 // 이벤트 부착
-function attachEvent({ todoForms, selectTypeBtns }) {
-  todoForms.forEach((todoForm) => {
+function attachEvent({ todoFormList, selectTypeBtnList }) {
+  todoFormList.forEach((todoForm) => {
     todoForm.addEventListener("submit", addTodoList);
   });
-  todoLists.forEach((todoList) => {
+  todoListGroup.forEach((todoList) => {
     todoList.addEventListener("click", removeTodoList);
   });
-  selectTypeBtns.forEach((typeBtn) => {
+  selectTypeBtnList.forEach((selectTypeBtn) => {
     typeBtn.addEventListener("click", selectTodoType);
   });
 }
 
 window.onload = () => {
   attachEvent({
-    todoForms: $$(".todo__form"),
-    selectTypeBtns: $$(".nav__item"),
+    todoFormList: $$(".todo__form"),
+    selectTypeBtnList: $$(".nav__item"),
   });
 };
