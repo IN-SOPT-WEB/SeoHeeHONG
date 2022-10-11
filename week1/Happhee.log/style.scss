@@ -5,6 +5,7 @@ $article-background-color: #e9e95a;
 $main-text-color: #e9e95a;
 $text-color: rgb(18, 24, 98);
 $white-color: white;
+$border-bottom-color: #7a78d7;
 
 @keyframes post-ani {
   25% {
@@ -63,14 +64,14 @@ header.title {
     }
   }
 
-  > button {
+  > a {
     padding: 0.5rem;
 
     border: 0.4rem solid $article-background-color;
     border-radius: 2rem;
 
     font-size: 1.5rem;
-
+    text-decoration: none;
     &:hover {
       background-color: $article-background-color;
       color: $white-color;
@@ -99,19 +100,29 @@ nav {
   justify-content: space-between;
   gap: 1rem;
 
+  height: 5rem;
   padding: 1rem 2rem;
 
   background-color: $nav-color;
 
-  > button {
-    width: fit-content;
-    padding: 0.3rem;
+  .input__wrapper {
+    padding: 0.3rem 1rem;
 
     border: none;
     border-radius: 1rem;
     font-size: 1.3rem;
+    background-color: $white-color;
 
     text-align: center;
+    cursor: pointer;
+    z-index: 1;
+  }
+  input {
+    font-size: 1.3rem;
+    border: none;
+    background-color: $white-color;
+
+    cursor: pointer;
   }
 }
 .nav__list {
@@ -134,6 +145,22 @@ nav {
       border-bottom: 0.2rem solid $text-color;
     }
   }
+}
+.time__item {
+  padding: 0.3rem 1rem;
+  background-color: $white-color;
+
+  border-top: 0.1rem solid $border-bottom-color;
+  &:hover {
+    background-color: $nav-color;
+  }
+}
+.hide {
+  display: none;
+}
+.select {
+  color: $white-color;
+  background-color: $nav-color;
 }
 main {
   display: flex;
