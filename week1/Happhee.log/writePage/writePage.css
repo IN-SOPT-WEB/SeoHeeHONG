@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(255, 181, 191);
+}
+body input {
+  font-size: 3rem;
+}
+body ul {
+  display: flex;
+}
+body ul > li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 0.2rem solid rgb(105, 60, 210);
+  background-color: white;
+  color: rgb(105, 60, 210);
+  font-size: 2rem;
+  cursor: pointer;
+}
+body ul > li:hover {
+  transform: scaleX(1.1);
+}/*# sourceMappingURL=writePage.css.map */
