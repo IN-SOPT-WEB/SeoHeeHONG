@@ -61,7 +61,6 @@ const slidePrevious = () => {
   section.style.transform = `translateX(-${CARD_WIDTH * (currentSlide - 1)}px)`;
 };
 
-//캐러셀 슬라이드 오른쪽으로 이동
 const slideNext = () => {
   if (currentSlide >= velogLength) {
     currentSlide = 0;

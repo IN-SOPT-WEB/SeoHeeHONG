@@ -71,7 +71,7 @@ function addInputTag(e) {
 }
 
 function attachEvent({ input, tagBtnList }) {
-  input.addEventListener("keyup", addInputTag);
+  input.addEventListener("keypress", addInputTag);
 
   tagBtnList.forEach((tagBtn) => {
     tagBtn.addEventListener("click", removeTag);
