@@ -11,7 +11,6 @@ function setLocalStorage(tagList) {
 }
 function initTagList() {
   const currentStorage = JSON.parse(localStorage.getItem("tagList"));
-  console.log(currentStorage);
   currentStorage.forEach((tag) => {
     const li = document.createElement("li");
     li.innerHTML = `<span>${tag}
