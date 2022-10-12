@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/velog_logo.png" />
+    <link rel="icon" type="image/svg+xml" href="../public/velog_logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../reset.css" />
     <link rel="stylesheet" href="./style.css" />
@@ -10,7 +10,10 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <title>Happhee.log</title>
   </head>
   <body>
@@ -23,7 +26,7 @@
         <span class="material-icons" style="font-size: 3rem"> search </span>
         <a href="./writePage/writePage.html">Write</a>
         <div class="profile__container">
-          <img src="./public/profile.png" alt="HappheeProfile" />
+          <img src="../public/profile.png" alt="HappheeProfile" />
         </div>
       </div>
     </header>
@@ -50,6 +53,7 @@
       </div>
     </nav>
     <main>
+      <span class="prev_btn material-symbols-outlined"> arrow_back_ios </span>
       <section>
         <article class="velog">
           <div class="velog__image">
@@ -69,7 +73,7 @@
           <footer class="velog__footer">
             <div class="velog__footer__profile">
               <div class="velog__footer__image">
-                <img src="./public/profile.png" alt="footerProfile" />
+                <img src="../public/profile.png" alt="footerProfile" />
               </div>
               <span>by Happhee</span>
             </div>
@@ -99,7 +103,7 @@
           <footer class="velog__footer">
             <div class="velog__footer__profile">
               <div class="velog__footer__image">
-                <img src="./public/profile.png" alt="footerProfile" />
+                <img src="../public/profile.png" alt="footerProfile" />
               </div>
               <span>by Happhee</span>
             </div>
@@ -130,7 +134,7 @@
           <footer class="velog__footer">
             <div class="velog__footer__profile">
               <div class="velog__footer__image">
-                <img src="./public/profile.png" alt="footerProfile" />
+                <img src="../public/profile.png" alt="footerProfile" />
               </div>
               <span>by Happhee</span>
             </div>
@@ -159,7 +163,7 @@
           <footer class="velog__footer">
             <div class="velog__footer__profile">
               <div class="velog__footer__image">
-                <img src="./public/profile.png" alt="footerProfile" />
+                <img src="../public/profile.png" alt="footerProfile" />
               </div>
               <span>by Happhee</span>
             </div>
@@ -188,7 +192,7 @@
           <footer class="velog__footer">
             <div class="velog__footer__profile">
               <div class="velog__footer__image">
-                <img src="./public/profile.png" alt="footerProfile" />
+                <img src="../public/profile.png" alt="footerProfile" />
               </div>
               <span>by Happhee</span>
             </div>
@@ -213,7 +217,7 @@
           <footer class="velog__footer">
             <div class="velog__footer__profile">
               <div class="velog__footer__image">
-                <img src="./public/profile.png" alt="footerProfile" />
+                <img src="../public/profile.png" alt="footerProfile" />
               </div>
               <span>by Happhee</span>
             </div>
@@ -241,7 +245,7 @@
           <footer class="velog__footer">
             <div class="velog__footer__profile">
               <div class="velog__footer__image">
-                <img src="./public/profile.png" alt="footerProfile" />
+                <img src="../public/profile.png" alt="footerProfile" />
               </div>
               <span>by Happhee</span>
             </div>
@@ -269,7 +273,7 @@
           <footer class="velog__footer">
             <div class="velog__footer__profile">
               <div class="velog__footer__image">
-                <img src="./public/profile.png" alt="footerProfile" />
+                <img src="../public/profile.png" alt="footerProfile" />
               </div>
               <span>by Happhee</span>
             </div>
@@ -297,7 +301,7 @@
           <footer class="velog__footer">
             <div class="velog__footer__profile">
               <div class="velog__footer__image">
-                <img src="./public/profile.png" alt="footerProfile" />
+                <img src="../public/profile.png" alt="footerProfile" />
               </div>
               <span>by Happhee</span>
             </div>
@@ -322,7 +326,7 @@
           <footer class="velog__footer">
             <div class="velog__footer__profile">
               <div class="velog__footer__image">
-                <img src="./public/profile.png" alt="footerProfile" />
+                <img src="../public/profile.png" alt="footerProfile" />
               </div>
               <span>by Happhee</span>
             </div>
@@ -350,7 +354,7 @@
           <footer class="velog__footer">
             <div class="velog__footer__profile">
               <div class="velog__footer__image">
-                <img src="./public/profile.png" alt="footerProfile" />
+                <img src="../public/profile.png" alt="footerProfile" />
               </div>
               <span>by Happhee</span>
             </div>
@@ -381,7 +385,7 @@
           <footer class="velog__footer">
             <div class="velog__footer__profile">
               <div class="velog__footer__image">
-                <img src="./public/profile.png" alt="footerProfile" />
+                <img src="../public/profile.png" alt="footerProfile" />
               </div>
               <span>by Happhee</span>
             </div>
@@ -392,7 +396,16 @@
           </footer>
         </article>
       </section>
+      <span class="next_btn material-symbols-outlined">
+        arrow_forward_ios
+      </span>
     </main>
+    <div class="hide modal">
+      <div class="modal__content">
+        <p class="modal__body"></p>
+        <span class="modal__cancleBtn material-icons"> cancel </span>
+      </div>
+    </div>
   </body>
   <script type="module" src="./main.js"></script>
 </html>
