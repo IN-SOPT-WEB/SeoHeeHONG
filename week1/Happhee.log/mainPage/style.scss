@@ -155,24 +155,35 @@ nav {
     background-color: $nav-color;
   }
 }
-.hide {
-  display: none;
-}
-.select {
-  color: $white-color;
-  background-color: $nav-color;
-}
+
 main {
   display: flex;
+  // width: 100%;
+  height: 100vh;
+
+  overflow-x: hidden;
+  background-color: $section-color;
+  > span {
+    position: absolute;
+
+    padding: 1rem 2rem;
+  }
+}
+.prve_btn {
+  left: 1rem;
+}
+.next_btn {
+  right: 1rem;
 }
 section {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 
-  width: 100%;
-  height: auto;
-  padding: 0 6rem;
+  gap: 3rem;
+
+  margin-top: 3rem;
+  padding-right: 1rem;
+  transition: all 1s;
 
   background-color: $section-color;
 }
@@ -180,8 +191,8 @@ article {
   display: flex;
   flex-direction: column;
 
-  width: 20rem;
-  height: auto;
+  width: 40rem;
+  height: 25rem;
   margin: 1rem 0.4rem;
 
   border: 0.1rem solid $article-background-color;
@@ -249,6 +260,41 @@ article {
     height: 100%;
     object-fit: contain;
   }
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    position: absolute;
+    top: 30%;
+    left: 40%;
+
+    width: 20rem;
+    height: auto;
+    margin: 1rem 0.4rem;
+
+    border: 0.1rem solid $article-background-color;
+    border-radius: 0.8rem;
+    background-color: $article-background-color;
+  }
+}
+.hide {
+  display: none;
+}
+.select {
+  color: $white-color;
+  background-color: $nav-color;
 }
 @media all and (min-width: 321px) and (max-width: 768px) {
   article {
