@@ -10,6 +10,7 @@ interface ContentProps {
   handleIsCorrect: (newIsCorrect: boolean) => void;
   handleIsModal: (newIsModal: boolean) => void;
 }
+
 export default function Content(props: ContentProps) {
   const { pokemons, point, handlePokemons, handlePoint, handleIsCorrect, handleIsModal } = props;
 
@@ -17,7 +18,7 @@ export default function Content(props: ContentProps) {
     if (event.target instanceof HTMLButtonElement) {
       const clickButton = event.target.innerHTML;
       if (clickButton === pokemons[0].name) {
-        if (point + 1 != 5) handlePokemons(pokemons.splice(1, pokemons.length));
+        if (point + 1 != 5) handlePokemons(pokemons.slice(1, pokemons.length));
         handlePoint(point + 1);
         handleIsCorrect(true);
         setTimeout(() => {
@@ -38,7 +39,6 @@ export default function Content(props: ContentProps) {
     handlePoint(0);
   };
   if (pokemons.length === 0) return <StMain />;
-
   return (
     <StMain>
       <StPokemonImgWrapper>
@@ -136,7 +136,7 @@ const StUl = styled.ul`
 `;
 
 const StResetBtn = styled.button`
-  width: 50%;
+  width: 10rem;
   padding: 1rem;
   margin: 1rem;
 
