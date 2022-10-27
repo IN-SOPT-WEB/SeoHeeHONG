@@ -15,6 +15,7 @@ export default function Main() {
   useEffect(() => {
     pokemonItems.sort(() => Math.random() - 0.5);
     setPokemons(pokemonItems);
+    console.log(pokemonItems);
   }, []);
 
   const handlePokemons = (newPokemons: PokemonItem[]) => {

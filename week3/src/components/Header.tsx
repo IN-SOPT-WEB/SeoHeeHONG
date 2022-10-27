@@ -5,7 +5,6 @@ interface HeaderProps {
 }
 export default function Header(props: HeaderProps) {
   const { point, isCorrect } = props;
-  console.log(isCorrect);
   return (
     <StHeaderWrapper>
       <h1>Pokemon </h1>
