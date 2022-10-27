@@ -20,9 +20,10 @@ export default function Content(props: ContentProps) {
       const clickButton = event.target.innerHTML;
       if (clickButton === pokemons[0].name) {
         if (point + 1 != 5) {
-          handleModalPokemon(pokemons[0]);
           handlePokemons(pokemons.slice(1, pokemons.length));
         }
+
+        handleModalPokemon(pokemons[0]);
         handlePoint(point + 1);
         handleIsCorrect(true);
         setTimeout(() => {
