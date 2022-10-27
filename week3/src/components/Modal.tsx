@@ -1,15 +1,17 @@
 import styled, { css, keyframes } from 'styled-components';
+
+import { PokemonItem } from '../types/image';
 interface ModalProps {
+  isCorrect: boolean;
   isModal: boolean;
+  modalPokemon: PokemonItem;
 }
 export default function Modal(props: ModalProps) {
-  const { isModal } = props;
+  const { isCorrect, isModal, modalPokemon } = props;
 
   return (
     <StModalWrapper isModal={isModal}>
-      <StModalContent>
-        <p>❗️내 이름을 맞춰죠❗️</p>
-      </StModalContent>
+      <StModalContent>{isCorrect ? <p>{modalPokemon.modalContent}</p> : <p>❗️내 이름을 맞춰죠❗️</p>}</StModalContent>
     </StModalWrapper>
   );
 }

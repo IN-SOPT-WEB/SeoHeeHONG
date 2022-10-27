@@ -8,6 +8,7 @@ import Modal from '../components/Modal';
 import { PokemonItem } from '../types/image';
 export default function Main() {
   const [pokemons, setPokemons] = useState<PokemonItem[]>([]);
+  const [modalPokemon, setModalPokemon] = useState<PokemonItem>(pokemonItems[0]);
   const [point, setPoint] = useState(0);
   const [isCorrect, setIsCorrect] = useState(false);
   const [isModal, setIsModal] = useState(false);
@@ -15,7 +16,7 @@ export default function Main() {
   useEffect(() => {
     pokemonItems.sort(() => Math.random() - 0.5);
     setPokemons(pokemonItems);
-    console.log(pokemonItems);
+    setModalPokemon(pokemons[0]);
   }, []);
 
   const handlePokemons = (newPokemons: PokemonItem[]) => {
@@ -30,6 +31,9 @@ export default function Main() {
   const handleIsModal = (newIsModal: boolean) => {
     setIsModal(newIsModal);
   };
+  const handleModalPokemon = (newModalPokemon: PokemonItem) => {
+    setModalPokemon(newModalPokemon);
+  };
 
   return (
     <StWrapper>
@@ -41,8 +45,9 @@ export default function Main() {
         handlePoint={handlePoint}
         handleIsCorrect={handleIsCorrect}
         handleIsModal={handleIsModal}
+        handleModalPokemon={handleModalPokemon}
       />
-      <Modal isModal={isModal} />
+      <Modal isCorrect={isCorrect} isModal={isModal} modalPokemon={modalPokemon} />
     </StWrapper>
   );
 }

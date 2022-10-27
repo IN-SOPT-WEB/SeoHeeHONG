@@ -9,27 +9,30 @@ interface ContentProps {
   handlePoint: (newPoint: number) => void;
   handleIsCorrect: (newIsCorrect: boolean) => void;
   handleIsModal: (newIsModal: boolean) => void;
+  handleModalPokemon: (newModalPokemon: PokemonItem) => void;
 }
 
 export default function Content(props: ContentProps) {
-  const { pokemons, point, handlePokemons, handlePoint, handleIsCorrect, handleIsModal } = props;
+  const { pokemons, point, handlePokemons, handlePoint, handleIsCorrect, handleIsModal, handleModalPokemon } = props;
 
   const handleClickAnswer = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     if (event.target instanceof HTMLButtonElement) {
       const clickButton = event.target.innerHTML;
       if (clickButton === pokemons[0].name) {
-        if (point + 1 != 5) handlePokemons(pokemons.slice(1, pokemons.length));
+        if (point + 1 != 5) {
+          handleModalPokemon(pokemons[0]);
+          handlePokemons(pokemons.slice(1, pokemons.length));
+        }
         handlePoint(point + 1);
         handleIsCorrect(true);
         setTimeout(() => {
           handleIsCorrect(false);
-        }, 2000);
-      } else {
-        handleIsModal(true);
-        setTimeout(() => {
-          handleIsModal(false);
-        }, 2000);
+        }, 1500);
       }
+      handleIsModal(true);
+      setTimeout(() => {
+        handleIsModal(false);
+      }, 1500);
     }
   };
 
