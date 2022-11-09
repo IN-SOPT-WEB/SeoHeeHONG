@@ -15,7 +15,17 @@ interface HistoryProps {
 const Histroy = (props: HistoryProps) => {
   const { historyList, handleHistoryList, userProfile, handleUserProfile, isHistory, handleIsHistory } = props;
 
-  const selectUserProfile = async (e: React.MouseEvent<HTMLParagraphElement>) => {};
+  const selectUserProfile = async (e: React.MouseEvent<HTMLParagraphElement>) => {
+    const userName = e.currentTarget.innerText;
+    handleUserProfile(userProfile, 'pending');
+    handleIsHistory();
+    try {
+      const { data } = await getUser(userName);
+      handleUserProfile({ ...userProfile, data }, 'resolved');
+    } catch (error) {
+      handleUserProfile({ ...userProfile, data: null }, 'rejected');
+    }
+  };
 
   const deleteUserProfile = (e: React.MouseEvent<HTMLButtonElement>) => {};
   return (
