@@ -55,7 +55,9 @@ const SearchBar = (props: SearchBarProps) => {
         }
       }
   };
-  const handleIsHistory = () => {};
+  const handleIsHistory = () => {
+    setIsHistory((prev) => !prev);
+  };
   return (
     <StForm onSubmit={getUserProfile}>
       <StInput type="text" placeholder="Github 프로필을 검색해보세요" onFocus={handleIsHistory} />
