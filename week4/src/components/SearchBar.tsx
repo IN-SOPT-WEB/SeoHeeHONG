@@ -34,21 +34,30 @@ const SearchBar = (props: SearchBarProps) => {
       });
     }
   };
-
+  const mswHandler = () => {
+    fetch('/search/happhee')
+      .then((res) => res.json())
+      .then((res) => {
+        const data = res;
+        handleUserProfile({ ...userProfile, data }, 'resolved');
+      });
+  };
   const getUserProfile = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (e.target instanceof HTMLFormElement)
       if (e.target.children[0] instanceof HTMLInputElement) {
         const inputTarget = e.target.children[0];
         const userName = inputTarget.value;
         updateHistoryList(userName);
         handleIsHistory();
-
+        if (userName === 'happhee') {
+          mswHandler();
+        }
         try {
           const { data } = await getUser(userName);
 
           handleUserProfile({ ...userProfile, data }, 'resolved');
-          setHistoryList;
           inputTarget.value = '';
         } catch (err) {
           handleUserProfile({ ...userProfile, data: null }, 'rejected');
