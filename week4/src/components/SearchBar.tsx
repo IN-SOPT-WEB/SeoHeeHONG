@@ -19,8 +19,21 @@ const SearchBar = (props: SearchBarProps) => {
     if (localHistoryList) setHistoryList(JSON.parse(localHistoryList));
   }, []);
 
-  const handleHistoryList = (newHistoryList: string[]) => {};
-  const updateHistoryList = (userProfileName: string) => {};
+  const handleHistoryList = (newHistoryList: string[]) => {
+    setHistoryList(newHistoryList);
+    localStorage.setItem('historyList', JSON.stringify(newHistoryList));
+  };
+  const updateHistoryList = (userProfileName: string) => {
+    if (historyList.length === undefined) setHistoryList([userProfileName]);
+    else {
+      if (historyList.includes(userProfileName)) return;
+      localStorage.setItem('historyList', JSON.stringify([...historyList, userProfileName]));
+
+      setHistoryList((currentHistoryList) => {
+        return [...currentHistoryList, userProfileName];
+      });
+    }
+  };
 
   const getUserProfile = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
