@@ -27,7 +27,12 @@ const Histroy = (props: HistoryProps) => {
     }
   };
 
-  const deleteUserProfile = (e: React.MouseEvent<HTMLButtonElement>) => {};
+  const deleteUserProfile = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const targetNode = e.currentTarget.previousSibling;
+    if (!(targetNode instanceof HTMLElement)) return;
+    const newHistoryList = historyList.filter((el) => el !== targetNode.innerText);
+    handleHistoryList(newHistoryList);
+  };
   return (
     <StUl>
       {isHistory ? (
