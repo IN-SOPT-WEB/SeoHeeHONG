@@ -37,6 +37,23 @@ const SearchBar = (props: SearchBarProps) => {
 
   const getUserProfile = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (e.target instanceof HTMLFormElement)
+      if (e.target.children[0] instanceof HTMLInputElement) {
+        const inputTarget = e.target.children[0];
+        const userName = inputTarget.value;
+        updateHistoryList(userName);
+        handleIsHistory();
+
+        try {
+          const { data } = await getUser(userName);
+
+          handleUserProfile({ ...userProfile, data }, 'resolved');
+          setHistoryList;
+          inputTarget.value = '';
+        } catch (err) {
+          handleUserProfile({ ...userProfile, data: null }, 'rejected');
+        }
+      }
   };
   const handleIsHistory = () => {};
   return (
