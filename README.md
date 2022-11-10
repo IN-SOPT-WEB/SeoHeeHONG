@@ -14,5 +14,6 @@
 | 2주차 |  ✨ Happhee-To_do + JS ✨     |   [링크](https://github.com/IN-SOPT-WEB/SeoHeeHONG/pull/4)      |
 | 2주차 |  ✨ Happhee.log + JS ✨      |   [링크](https://github.com/IN-SOPT-WEB/SeoHeeHONG/pull/5)      |
 | 3주차 |  ⚡️⚡️Pokemon⚡️⚡️   |   [링크](https://github.com/IN-SOPT-WEB/SeoHeeHONG/pull/6)      |
+| 4주차 |  🌈 Github Profile Finder 🌈 + MSW |   [링크](https://github.com/IN-SOPT-WEB/SeoHeeHONG/pull/8)      |
 
 </div>
